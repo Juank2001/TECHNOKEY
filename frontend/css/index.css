@@ -1,0 +1,23 @@
+.form{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    /*width: 60%;*/
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 700px) {
+    .content{
+        width: 100%;
+    }
+}

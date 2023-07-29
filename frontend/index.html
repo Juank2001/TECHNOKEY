@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="modal fade" id="new_vuelo" tabindex="-1" aria-labelledby="title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="title">Nuevo vuelo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="origen" class="form-label">Origen</label>
+                            <input type="text" required class="form-control" id="origen">
+                        </div>
+                        <div class="mb-3">
+                            <label for="destino" class="form-label">Destino</label>
+                            <input type="text" required class="form-control" id="destino">
+                        </div>
+                        <div class="mb-3">
+                            <label for="costo" class="form-label">Costo</label>
+                            <input type="number" required class="form-control" id="costo">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+                        <button type="submit" id="new_vuelo_save" class="btn btn-primary">Crear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="not-session">
+            <div class="form">
+                <div class="content">
+                    <div class="card">
+                        <div class="container mt-5 mb-5">
+                            <div class="title">
+                                <h3>Ingreso</h3>
+                            </div>
+
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="usuario" class="form-label">Usuario</label>
+                                    <input type="text" required class="form-control" id="usuario">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <input type="password" required class="form-control" id="password">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Ingresar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="session">
+            <div class="form">
+                <div class="content">
+                    <div class="buttons">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#new_vuelo" class="btn btn-secondary">Nuevo vuelo</button>
+                        <button type="button" id="salir" class="btn btn-danger">Salir</button>
+                    </div>
+                    <div class="card p-3 mt-2">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th>Vuelo</th>
+                                    <th>Fecha</th>
+                                    <th>Salida</th>
+                                    <th>Llegada</th>
+                                    <th>Duración</th>
+                                    <th>Destino</th>
+                                    <th>Origen</th>
+                                    <th>Costo</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableVuelos">
+                                
+                            </tbody>
+
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item" id="prev">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item" id="next">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
